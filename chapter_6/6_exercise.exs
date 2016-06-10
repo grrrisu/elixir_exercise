@@ -12,7 +12,7 @@ Path.extname("chapter_6/6_exercise.exs")
 System.cwd
 
 # Convert a string containing JSON into Elixir data structures. (Just find; don’t install.)
-# Poison
+# eg. Poison
 
 # Execute a command in your operating system’s shell.
 System.cmd("echo", ["hello"])

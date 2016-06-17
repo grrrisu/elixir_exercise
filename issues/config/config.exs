@@ -11,6 +11,9 @@ use Mix.Config
 # You can configure for your application as:
 #
 #     config :issues, key: :value
+
+config :issues, github_url: "https://api.github.com/repos"
+
 #
 # And access this configuration in your application as:
 #

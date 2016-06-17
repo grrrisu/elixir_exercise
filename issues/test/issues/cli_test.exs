@@ -2,7 +2,7 @@ defmodule CLITest do
   use ExUnit.Case
   doctest Issues
 
-  import Issues.CLI, only: [ run: 1 ]
+  import Issues.CLI
 
   test "parse argv with help" do
     assert Issues.CLI.parse_args({[help: true], [], []}) == :help

@@ -2,7 +2,7 @@ defmodule Issues.CLI do
 
   @default_count 5
 
-  def run(argv) do
+  def main(argv) do
     argv
     |> OptionParser.parse(switches: [help: :boolean], aliases: [h: :help] )
     |> parse_args

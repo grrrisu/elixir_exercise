@@ -1,7 +1,15 @@
 defmodule Issues.CLI do
 
+  import Logger
+
   @default_count 5
 
+  @doc """
+  Takes to arguments user and project
+  or the option -h or --help for help
+  ## Example
+    iex> Issues.CLI.main(["grrrisu", "dawning"])
+  """
   def main(argv) do
     argv
     |> OptionParser.parse(switches: [help: :boolean], aliases: [h: :help] )
@@ -29,6 +37,7 @@ defmodule Issues.CLI do
   end
 
   def process({user, project, count}) do
+    Logger.info("getting issues for #{user} #{project}")
     Issues.Github.fetch(user, project)
     |> decode_response
     |> convert_list_to_map

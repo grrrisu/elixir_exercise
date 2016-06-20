@@ -14,6 +14,8 @@ use Mix.Config
 
 config :issues, github_url: "https://api.github.com/repos"
 
+# config :logger, compile_time_purge_level: :info
+
 #
 # And access this configuration in your application as:
 #

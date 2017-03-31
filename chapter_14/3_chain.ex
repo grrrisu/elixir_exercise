@@ -8,11 +8,13 @@ defmodule Chain do
   end
 
   def create_process(n) do
+    # build the chain of process waiting for incoming message
     last = Enum.reduce 1..n, self(),
             fn(_, current_counter) ->
               spawn(Chain, :counter, [current_counter])
             end
 
+    # send a message to the last process, passing the count through the chain and back again
     send last, 0
 
     receive do

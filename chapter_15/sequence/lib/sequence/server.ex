@@ -10,7 +10,7 @@ defmodule Sequence.Server do
     { :reply, {:ok, new_number}, new_number }
   end
 
-  def handle_cast({:increment, delta}, current_number) do
+  def handle_cast({:increment_number, delta}, current_number) do
     # does not reply, set the new state to the second argument
     { :noreply, current_number + delta }
   end

@@ -1,3 +1,10 @@
+# in mix.exs
+# def application do
+#   # Specify extra applications you'll use from Erlang/Elixir
+#   [extra_applications: [:logger],
+#>  mod: {Sequence, []}]
+# end
+
 defmodule Sequence do
   use Application
 
